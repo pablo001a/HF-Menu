@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Image</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            position: absolute;
-            object-fit: contain;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Visualizador de Imagem</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
-    <!-- Imagem será inserida dinamicamente -->
-    <script>
-        // Obter o parâmetro 'image' da URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const imageName = urlParams.get('image');
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const image = params.get("image");
 
-        // Verificar se o parâmetro 'image' foi fornecido
-        if (imageName) {
-            // Criar uma tag <img> dinamicamente
-            const img = document.createElement('img');
-            img.src = imageName; // Definir o caminho da imagem
-            img.alt = 'Dynamic Image'; // Descrição alternativa
-
-            // Adicionar a imagem ao corpo do documento
-            document.body.appendChild(img);
-        } else {
-            // Caso nenhum parâmetro seja fornecido, exibir uma mensagem de erro
-            document.body.innerHTML = '<p style="color: red;">Erro: Parâmetro "image" não especificado.</p>';
-        }
-    </script>
+    if (image) {
+      const img = document.createElement("img");
+      img.src = image;
+      document.body.appendChild(img);
+    } else {
+      document.body.innerHTML = "<p style='color: white;'>Imagem não encontrada.</p>";
+    }
+  </script>
 </body>
 </html>
