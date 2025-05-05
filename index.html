@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <title>Visualizador de Imagem</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      background-color: #000;
+      padding: 0;
+      background: transparent;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -29,7 +30,7 @@
       img.src = image;
       document.body.appendChild(img);
     } else {
-      document.body.innerHTML = "<p style='color: white;'>Imagem não encontrada.</p>";
+      document.body.innerHTML = "<p style='color: black;'>Imagem não encontrada.</p>";
     }
   </script>
 </body>
