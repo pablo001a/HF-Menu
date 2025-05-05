@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lobo Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Image</title>
   <style>
-    html, body {
+    body, html {
       margin: 0;
       padding: 0;
-      background: transparent;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .logo-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 20px;
+    .img-container {
+      border-radius: 25px;
       overflow: hidden;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      max-width: 90%;
+      max-height: 90%;
     }
 
-    .logo-container img {
+    .img-container img {
       display: block;
-      max-width: 100%;
-      border-radius: 20px;
+      width: 100%;
+      height: auto;
+      border-radius: 25px;
     }
   </style>
 </head>
 <body>
-  <div class="logo-container">
-    <img src="2d541a90-d9db-4992-b870-09ceafb4da23.png" alt="Lobo Menu">
+  <div class="img-container">
+    <img src="background.png" alt="Imagem de Fundo" />
   </div>
 </body>
 </html>
+
