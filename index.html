@@ -2,27 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Lobo Menu</title>
+  <title>Imagem do Menu</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent; /* Mantém o fundo do site transparente */
+      background: transparent;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+    }
+
+    .container {
+      border-radius: 30px;
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
     img {
-      border-radius: 25px; /* Cantos arredondados */
-      max-width: 90%;
-      max-height: 90%;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Sombra opcional */
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/pablo001a/HF-Menu/main/Menu.png" alt="Lobo Menu">
+  <div class="container">
+    <img id="menu-image" src="" alt="Menu Image">
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const imageUrl = params.get("image");
+
+    if (imageUrl) {
+      document.getElementById("menu-image").src = imageUrl;
+    } else {
+      document.body.innerHTML = "<p style='color:white;font-family:monospace;'>Nenhuma imagem definida com ?image=URL</p>";
+    }
+  </script>
 </body>
 </html>
