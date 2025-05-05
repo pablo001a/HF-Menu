@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transparent UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lobo Menu</title>
   <style>
     html, body {
       margin: 0;
@@ -12,21 +12,26 @@
       overflow: hidden;
     }
 
-    .container {
+    .logo-container {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-family: Arial, sans-serif;
-      color: white;
-      font-size: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .logo-container img {
+      display: block;
+      max-width: 100%;
+      border-radius: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Seu conteúdo aqui -->
-    <p>Menu Ativo</p>
+  <div class="logo-container">
+    <img src="2d541a90-d9db-4992-b870-09ceafb4da23.png" alt="Lobo Menu">
   </div>
 </body>
 </html>
